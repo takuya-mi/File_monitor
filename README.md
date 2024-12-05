@@ -1,8 +1,28 @@
 # File_monitor
 
 指定したディレクトリをサブプロセスで監視し、一定時間ごとにファイル数を取得する。監視中、ファイル数が複数回に渡って変化しなかった場合、実行中のプロセスが正常終了したか、または何らかのエラーで停止したと判断する。  
-この際、指定された宛先にメールを送信する。メールの宛先は `config.yaml` を編集することで変更可能である。  
-また、FileObserverを直接呼び出せば、GUIを使用せずに監視が可能である。メインプロセスとは完全に独立して実行されるので、呼び出し元が停止しても動作する。
+この際、指定された宛先にメールを送信する。メールの宛先は `config.yaml`をディレクトリに追加して指定する。 
+
+---
+
+**<config.ymal>**   
+
+      server_info:  
+        SMTP_HOST: 'mail.eng.osaka-u.ac.jp'  
+        SMTP_PORT: 587  
+        FROM_ADDRESS: 'onolab_server@ap.eng.osaka-u.ac.jp'  
+        USER_NAME: 'ap1g6svr'  
+        PASSWORD: 'ap1g6svrap1g6svr'  
+      
+      receiver_info:  
+        TO_ADDRESS: '@ap.eng.osaka-u.ac.jp'  
+        CC_ADDRESS: ''  
+        BCC_ADDRESS: ''  
+  
+---
+
+また、FileObserverを直接呼び出せば、GUIを使用せずに監視が可能である。メインプロセスとは完全に独立して実行されるので、呼び出し元が停止しても動作する。  
+
 
 ## 使い方
 
