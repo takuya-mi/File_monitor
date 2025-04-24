@@ -8,14 +8,14 @@
 **<config.ymal>**   
 
       server_info:  
-        SMTP_HOST: 'mail.eng.osaka-u.ac.jp'  
-        SMTP_PORT: 587  
-        FROM_ADDRESS: 'onolab_server@ap.eng.osaka-u.ac.jp'  
-        USER_NAME: 'ap1g6svr'  
-        PASSWORD: 'ap1g6svrap1g6svr'  
+        SMTP_HOST: '*'  
+        SMTP_PORT: *  
+        FROM_ADDRESS: '*'  
+        USER_NAME: '*'  
+        PASSWORD: '*'  
       
       receiver_info:  
-        TO_ADDRESS: '@ap.eng.osaka-u.ac.jp'  
+        TO_ADDRESS: '*'  
         CC_ADDRESS: ''  
         BCC_ADDRESS: ''  
   
